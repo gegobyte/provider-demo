@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../providers/auth.provider.dart';
+// import '../screens/home_screen.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -14,7 +17,10 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           child: Text('Logout'),
-          onPressed: () => Navigator.of(context).pushReplacementNamed('/'),
+         onPressed: () {
+            Provider.of<Auth>(context, listen: false).logout();
+            Navigator.of(context).pushReplacementNamed('/');
+          },
           // onPressed: () => Provider.of<Auth>(context, listen: false).logout(),
          
         ),

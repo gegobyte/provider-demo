@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/auth.provider.dart';
-import '../screens/home_screen.dart';
+// import '../screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -20,8 +20,8 @@ class LoginScreen extends StatelessWidget {
         child: RaisedButton(
           child: Text('Click to Login'),
           onPressed: () {
-            Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
-            // Provider.of<Auth>(context, listen: false).loginUser();
+            Provider.of<Auth>(context, listen: false).loginUser();
+            Navigator.of(context).pushReplacementNamed('/');
           },
         ),
       ),
