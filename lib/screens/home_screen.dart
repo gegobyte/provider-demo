@@ -4,6 +4,9 @@ import 'package:provider/provider.dart';
 import '../providers/auth.provider.dart';
 
 class HomeScreen extends StatelessWidget {
+
+  static const routeName = '/home';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +16,7 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           child: Text('Logout'),
-          onPressed: () => Provider.of<Auth>(context).logout(),
+          onPressed: () => Provider.of<Auth>(context, listen: false).logout(),
         ),
       ),
     );

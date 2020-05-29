@@ -11,11 +11,15 @@ class WelcomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             RaisedButton(
               child: Text('Login'),
               onPressed: () => Navigator.of(context).pushReplacementNamed(LoginScreen.routeName),
+            ),
+            RaisedButton(
+              child: Text('Signup'),
+              onPressed: () => print('Signup'),
             ),
           ],
         ),
