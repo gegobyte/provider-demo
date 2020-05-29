@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         home: Consumer<Auth>(
           builder: (_, auth, __) {
             print('main.dart logged in: ${auth.loggedIn}');
-            if(auth.loggedIn) return HomeScreen();
+            // if(auth.loggedIn) return HomeScreen();
             return WelcomeScreen();
           },
         ),
