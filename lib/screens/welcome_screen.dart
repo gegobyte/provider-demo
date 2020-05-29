@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
           children: <Widget>[
             RaisedButton(
               child: Text('Login'),
-              onPressed: () => Navigator.of(context).pushReplacementNamed(LoginScreen.routeName),
+              onPressed: () => Navigator.of(context).pushNamed(LoginScreen.routeName),
             ),
             RaisedButton(
               child: Text('Signup'),
